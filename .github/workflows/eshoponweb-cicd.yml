@@ -78,8 +78,8 @@ jobs:
     - name: deploy
       uses: azure/arm-deploy@v1
       with:
-        subscriptionId: ${{ env.2b5b0e51-514c-4289-b7c8-edd34c0adaa1 }}
-        resourceGroupName: ${{ env.rg-az400-eshopeonweb-1260345 }}
+        subscriptionId: ${{ env.SUBSCRIPTION-ID }}
+        resourceGroupName: ${{ env.RESOURCE-GROUP }}
         template: bicep-template/webapp.bicep
         parameters: 'webAppName=${{ env.WEBAPP-NAME }} location=${{ env.LOCATION }}'
         failOnStdErr: false   
